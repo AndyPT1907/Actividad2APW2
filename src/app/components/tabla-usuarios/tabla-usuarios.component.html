@@ -1,0 +1,29 @@
+
+<div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for (item of users; track $index) {
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.email}}</td>
+                    <td>
+                        <button [routerLink]="['/editar',item.id]" >Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                  </tr>
+            }
+          
+          
+        
+        </tbody>
+      </table>
+
+</div>
+
