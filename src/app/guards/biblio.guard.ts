@@ -1,10 +1,8 @@
-import { inject } from '@angular/core';
-import { CanActivateFn, Router, ActivatedRouteSnapshot, CanMatchFn, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot } from '@angular/router';
 import { LoginService } from '../services/login.service';
-import { state } from '@angular/animations';
+import { inject } from '@angular/core';
 
-
-export const authGuard: CanActivateFn = ( next : ActivatedRouteSnapshot,) => {
+export const biblioGuard: CanActivateFn = (next : ActivatedRouteSnapshot) => {
   const servicio = inject(LoginService)
   const router = inject(Router)
   const state = RouterStateSnapshot
@@ -18,7 +16,7 @@ const userRole = servicio.getCurrentUserRole();
   const requiredRole = next.data['role'];
 
   if (requiredRole && userRole !== requiredRole) {
-    if (userRole === 'user' && requiredRole === 'admin') {
+    if (userRole === 'user' && requiredRole === 'biblio') {
       router.navigate(['/noauth']);
       return false;
     } else {
@@ -29,10 +27,4 @@ const userRole = servicio.getCurrentUserRole();
 
   return true;
 
-
-
-}
- 
-
-  
-
+};
