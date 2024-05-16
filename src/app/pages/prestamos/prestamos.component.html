@@ -1,28 +1,28 @@
-<section id="prestamos">
-    <h2>Solicitud de Préstamo</h2>
-    <form action="procesar_prestamo.php" method="post">
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required>
+<section id="prestamos" class="prestamo-section">
+    <h2 class="prestamo-heading">Solicitud de Préstamo</h2>
+    <form action="procesar_prestamo.php" method="post" class="prestamo-form">
+        <label for="nombre" class="prestamo-label">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" class="prestamo-input" required>
 
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" required>
+        <label for="correo" class="prestamo-label">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" class="prestamo-input" required>
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono">
+        <label for="telefono" class="prestamo-label">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" class="prestamo-input">
 
-        <label for="libro">Libro solicitado:</label>
-        <select id="libro" name="libro">
+        <label for="libro" class="prestamo-label">Libro solicitado:</label>
+        <select id="libro" name="libro" class="prestamo-select">
             <option value="libro1">Título del libro 1</option>
             <option value="libro2">Título del libro 2</option>
             <!-- Agrega más opciones según los libros disponibles -->
         </select>
 
-        <label for="fecha_inicio">Fecha de inicio:</label>
-        <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+        <label for="fecha_inicio" class="prestamo-label">Fecha de inicio:</label>
+        <input type="date" id="fecha_inicio" name="fecha_inicio" class="prestamo-input" required>
 
-        <label for="fecha_fin">Fecha de devolución:</label>
-        <input type="date" id="fecha_fin" name="fecha_fin" required>
+        <label for="fecha_fin" class="prestamo-label">Fecha de devolución:</label>
+        <input type="date" id="fecha_fin" name="fecha_fin" class="prestamo-input" required>
 
-        <input type="submit" value="Solicitar Préstamo" class="btn">
+        <input type="submit" value="Solicitar Préstamo" class="btn btn-prestamo">
     </form>
 </section>

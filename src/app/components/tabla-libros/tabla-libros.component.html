@@ -1,26 +1,26 @@
-<table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Titulo</th>
-        <th>Autor</th>
-        <th>Año de publicación</th>
-        <th>ISBN</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-        @for (item of libros; track item) {
-            <tr>
-                <td>{{item.titulo}}</td>
-                <td>{{item.autor}}</td>
-                <td>{{item.anio_publicacion}}</td>
-                <td>{{item.isbn}}</td>
-                <td>
-                    <button >Editar</button>
-                    <button (click)="eliminar(item.id)">Eliminar</button>
-                </td>
-              </tr>
-        }
-      
-    </tbody>
-  </table>
+<table class="table table-bordered custom-table">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Autor</th>
+      <th>Año de publicación</th>
+      <th>ISBN</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+      @for (item of libros; track item) {
+          <tr>
+              <td>{{item.titulo}}</td>
+              <td>{{item.autor}}</td>
+              <td>{{item.anio_publicacion}}</td>
+              <td>{{item.isbn}}</td>
+              <td>
+                  <button class="btn btn-edit">Editar</button>
+                  <button class="btn btn-delete" (click)="eliminar(item.id)">Eliminar</button>
+              </td>
+            </tr>
+      }
+    
+  </tbody>
+</table>

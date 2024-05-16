@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark custom-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">B-teca-Virtual</a>
+    <a class="navbar-brand" href="#">B-teca-Virtual</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,33 +12,24 @@
         <li class="nav-item">
           <a class="nav-link" href="login">Login</a>
         </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="gestionU">Gestión de Usuarios</a>
-            </li>
-    
-            <li class="nav-item">
-              <a class="nav-link" href="gestionL">Gestión de Libros</a>
-            </li>
-            
-          
-           
-            <li class="nav-item">
-              <a class="nav-link" href="catalogo">Cátalogo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="prestamos">Préstamos</a>
-            </li>
-            
-          
-
-      
-
-
+        <li class="nav-item">
+          <a class="nav-link" href="gestionU">Gestión de Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gestionL">Gestión de Libros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="catalogo">Cátalogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="prestamos">Préstamos</a>
+        </li>
       </ul>
       <div>
-        <button (click)="cerrar()">Cerrar Sesion</button>
+        <button class="btn btn-danger" (click)="cerrar()">Cerrar Sesion</button>
       </div>
+      <br>
+      <br>
       <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="Search">
         <button class="btn btn-primary" type="button">Search</button>
